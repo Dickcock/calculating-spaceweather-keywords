@@ -1082,7 +1082,7 @@ def computeR(los, nx, ny, cdelt1):
     if len(yvalues) > len(xvalues):
         yvalues = yvalues[:int(len(xvalues))]
     
-    interp_coordinates = (xvalues,yvalues)    
+    interp_coordinates = (xvalues,yvalues)    # Are the X Y needed to be reversed?
     rim = scipy.ndimage.interpolation.map_coordinates(los.data,interp_coordinates,mode='nearest')
 
     # =============== [STEP 2] =============== 
